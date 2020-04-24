@@ -1,4 +1,31 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Antd Customization with  Typescript
+Ref : (https://ant.design/docs/react/use-in-typescript#Import-antd)
+#### Import antd
+` yarn add antd
+`
+
+#### Add `antd/dist/antd.css` at the top of `src/App.css`.
+
+`@import '~antd/dist/antd.css';`
+
+# Advanced Topic
+Now we need to customize the default webpack config. We can achieve that by using react-app-rewired which is one of create-react-app's custom config solutions.
+
+Import react-app-rewired and modify the scripts field in package.json. Due to new react-app-rewired@2.x issue, you shall need customize-cra along with react-app-rewired.
+
+`yarn add react-app-rewired customize-cra`
+
+```
+/* package.json */
+"scripts": {
+   "start": "react-app-rewired start",
+   "build": "react-app-rewired build",
+   "test": "react-app-rewired test",
+}
+```
+
+we can override this variable: 
+https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
 
 ## Available Scripts
 
