@@ -39,10 +39,7 @@
     "lint-fix": "tslint  './src/**/*.tsx' --fix"
   },
   "lint-staged": {
-    "src/**/*.{tsx}": [
-      "tslint --fix",
-      "git add"
-    ]
+    "*" : "tslint  './src/**/*.tsx' --fix"
   },
   "husky": {
     "hooks": {
