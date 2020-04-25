@@ -4,6 +4,7 @@
     "import-name": false,
     "jsx-no-lambda": false,
     "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],
-    "ordered-imports": true
+    "ordered-imports": true,
+    "react/jsx-sort-props": true
   }
 }
