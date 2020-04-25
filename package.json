@@ -36,11 +36,11 @@
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
     "lint": "tslint './src/**/*.tsx'",
-    "lint-fix": "tslint --fix"
+    "lint-fix": "tslint  './src/**/*.tsx' --fix"
   },
   "lint-staged": {
     "src/**/*.{tsx}": [
-      "tslint --fix",
+      "lint-fix",
       "git add"
     ]
   },
