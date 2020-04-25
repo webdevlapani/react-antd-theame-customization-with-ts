@@ -35,12 +35,12 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
-    "lint-tsx": "tslint './src/**/*.tsx'",
-    "lint-tsx-fix": "tslint --fix"
+    "lint": "tslint './src/**/*.tsx'",
+    "lint-fix": "tslint --fix"
   },
   "lint-staged": {
-    "src/**/*.{tsx}": [
-      "tslint --fix",
+    "src/**/*.{*}": [
+      "lint-fix",
       "git add"
     ],
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
