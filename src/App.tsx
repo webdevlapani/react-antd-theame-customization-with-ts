@@ -1,4 +1,4 @@
-import { Alert, Button,} from 'antd';
+import { Alert, Button } from 'antd';
 import React from 'react';
 import './App.css';
 

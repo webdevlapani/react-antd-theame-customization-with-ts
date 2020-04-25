@@ -39,7 +39,11 @@
     "lint-fix": "tslint  './src/**/*.tsx' --fix"
   },
   "lint-staged": {
-    "*" : "tslint  './src/**/*.tsx' --fix"
+    "*" : "tslint  './src/**/*.tsx' --fix",
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {
