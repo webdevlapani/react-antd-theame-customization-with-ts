@@ -21,6 +21,7 @@
     "babel-plugin-import": "^1.11.0",
     "husky": "^4.2.5",
     "less": "^3.9.0",
+    "lint-staged": "^10.1.7",
     "prettier": "^2.0.5",
     "react-app-rewired": "^2.1.0",
     "react-scripts": "^3.2.0",
@@ -38,8 +39,13 @@
     "lint-tsx-fix": "tslint --fix"
   },
   "lint-staged": {
-    "src/**/*.{jsx}": [
-      "tslint --fix"
+    "src/**/*.{tsx}": [
+      "tslint --fix",
+      "git add"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
     ]
   },
   "husky": {
