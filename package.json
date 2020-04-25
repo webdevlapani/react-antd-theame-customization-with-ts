@@ -22,7 +22,6 @@
     "husky": "^4.2.5",
     "less": "^3.9.0",
     "prettier": "^2.0.5",
-    "pretty-quick": "^2.0.1",
     "react-app-rewired": "^2.1.0",
     "react-scripts": "^3.2.0",
     "tslint": "^5.13.1",
@@ -35,11 +34,17 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
-    "lint-tsx": "tslint './src/**/*.tsx'"
+    "lint-tsx": "tslint './src/**/*.tsx'",
+    "lint-tsx-fix": "tslint --fix"
+  },
+  "lint-staged": {
+    "src/**/*.{jsx}": [
+      "tslint --fix"
+    ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "lint-staged"
     }
   },
   "eslintConfig": {
