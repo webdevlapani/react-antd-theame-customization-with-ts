@@ -1,4 +1,4 @@
-import { Alert, Button,         } from 'antd';
+import { Alert, Button,} from 'antd';
 import React from 'react';
 import './App.css';
 
@@ -9,7 +9,6 @@ const App = () => {
         Button
       </Button>
       <Button type="danger">Button</Button>
-      <Alert message={'test'} />
     </div>
   );
 };
