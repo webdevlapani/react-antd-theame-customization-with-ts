@@ -14,8 +14,7 @@
     "customize-cra": "^0.9.1",
     "less-loader": "^5.0.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "typescript": "~3.7.2"
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "babel-plugin-import": "^1.11.0",
@@ -25,10 +24,11 @@
     "prettier": "^2.0.5",
     "react-app-rewired": "^2.1.0",
     "react-scripts": "^3.2.0",
-    "tslint": "^5.13.1",
+    "tslint": "^5.20.1",
     "tslint-config-airbnb": "^5.11.1",
     "tslint-config-prettier": "^1.18.0",
-    "tslint-react": "^3.6.0"
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.7.5"
   },
   "scripts": {
     "start": "react-app-rewired start",
@@ -39,8 +39,8 @@
     "lint-fix": "tslint  './src/**/*.tsx' --fix"
   },
   "lint-staged": {
-    "*" : "tslint  './src/**/*.tsx' --fix",
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "tslint  './src/**/*.tsx' --fix",
       "prettier --write",
       "git add"
     ]

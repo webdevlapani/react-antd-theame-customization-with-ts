@@ -1,10 +1,19 @@
 {
-  "extends": ["tslint-config-airbnb", "tslint-react", "tslint-config-prettier", "tslint-react"],
+  "extends": ["tslint-config-airbnb", "tslint-react", "tslint-config-prettier"],
   "rules": {
     "import-name": false,
     "jsx-no-lambda": false,
     "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],
     "ordered-imports": true,
-    "react/jsx-sort-props": true
+    "jsx-boolean-value": false,
+    "interface-name": [true, "always-prefix"],
+    "jsx-sort-props": [
+      "error",
+      {
+        "callbacksLast": true,
+        "reservedFirst": true,
+        "shorthandFirst": true
+      }
+    ]
   }
 }
