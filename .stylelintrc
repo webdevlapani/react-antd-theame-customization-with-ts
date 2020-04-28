@@ -1,7 +1,9 @@
 {
   "extends": [
+     "stylelint-config-primer",
     "stylelint-config-twbs-bootstrap/scss"
   ],
+  "plugins": ["stylelint-scss"],
   "rules": {
     "property-blacklist": [
       "border-radius",
